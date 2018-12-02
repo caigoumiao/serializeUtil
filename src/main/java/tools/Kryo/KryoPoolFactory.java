@@ -21,27 +21,18 @@ import com.esotericsoftware.kryo.pool.KryoPool;
 import org.objenesis.strategy.StdInstantiatorStrategy;
 import testModel.User;
 
-/**
- * @author tangjie<https://github.com/tang-jie>
- * @filename:KryoPoolFactory.java
- * @description:KryoPoolFactory功能模块
- * @blogs http://www.cnblogs.com/jietang/
- * @since 2016/10/7
- */
 public class KryoPoolFactory
 {
 
     private static volatile KryoPoolFactory poolFactory = null;
 
-    private KryoFactory factory = new KryoFactory() {
-        @Override
-        public Kryo create() {
-            Kryo kryo = new Kryo();
-            kryo.setReferences(false);
-            kryo.register(User.class);
-            kryo.setInstantiatorStrategy(new StdInstantiatorStrategy());
-            return kryo;
-        }
+    private KryoFactory factory = () ->
+    {
+        Kryo kryo = new Kryo();
+        kryo.setReferences(false);
+        kryo.register(User.class);
+        kryo.setInstantiatorStrategy(new StdInstantiatorStrategy());
+        return kryo;
     };
 
     private KryoPool pool = new KryoPool.Builder(factory).build();
