@@ -1,8 +1,8 @@
-package test;
+package tools.Fst;
 
 import org.junit.Test;
 import org.nustaq.serialization.FSTConfiguration;
-import util.FstUtil;
+import testModel.User;
 
 public class FSTTestCase
 {

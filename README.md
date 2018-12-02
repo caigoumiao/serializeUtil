@@ -1,9 +1,9 @@
 # serializeUtil
-Here are some common serialization tools in Java, including FST、Hessian、Protostuff、Kryo
+Here are some common serialization tools in Java, including FST、tools.Hessian、Protostuff、tools.Kryo
 
 ### 使用说明
 
-util 包下有四个Util 工具类，由其命名可知它们分别代表着Fst、Hessia、Kryo、Protostuff 的工具包。每个工具包有两个基本的方法：`serialize()`和`deserialize()` 分别代表着基本的序列化和反序列化操作。
+util 包下有四个Util 工具类，由其命名可知它们分别代表着Fst、Hessia、tools.Kryo、Protostuff 的工具包。每个工具包有两个基本的方法：`serialize()`和`deserialize()` 分别代表着基本的序列化和反序列化操作。
 
 `serialize()`将基本对象Object 序列化为byte 数组，而`deserialize()` 将byte[] 数组反序列化为基本对象Object 。
 
@@ -11,19 +11,19 @@ util 包下有四个Util 工具类，由其命名可知它们分别代表着Fst�
 
 test 包下有四个test case 分别对应着四个工具包的测试：（测试的对象是一个有12个属性字段的User 对象）
 
-1. Fst 测试结果：
+1. tools.Fst 测试结果：
     ```angular2html
     序列化耗时：58ms
     码流大小为：48 byte
     反序列化耗时：6ms
     ``` 
-2. Hessian 测试结果：
+2. tools.Hessian 测试结果：
     ```angular2html
     序列化耗时：233ms
     码流大小为：179 byte
     反序列化耗时：6ms
     ```
-3. Kryo 测试结果：
+3. tools.Kryo 测试结果：
     ```angular2html
     序列化耗时：297ms
     码流大小为：56 byte

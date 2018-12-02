@@ -1,14 +1,9 @@
-package util;
+package tools.Kryo;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.io.Input;
 import com.esotericsoftware.kryo.io.Output;
 import com.esotericsoftware.kryo.pool.KryoPool;
-import com.sun.org.apache.xml.internal.serializer.Serializer;
-import test.User;
-
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 
 public class KryoUtil
 {

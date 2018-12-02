@@ -1,21 +1,23 @@
-package test;
+package tools.Kryo;
 
 import org.junit.Test;
-import util.ProtoStuffUtil;
+import KryoPoolFactory;
+import KryoUtil;
+import testModel.User;
 
-public class ProtoStuffTestCase
+public class KryoTestCase
 {
     static User u=new User("miaoqiao", 21, true, "nihao","nihao","nihao","nihao","nihao","nihao","nihao","nihao","nihao");
 
     @Test
-    public void testProtoStuff(){
+    public void testKryo(){
         long startTime= System.currentTimeMillis();
-        byte[] tmp = ProtoStuffUtil.serialize(u);
+        byte[] tmp = KryoUtil.serialize(u);
         long endTime=System.currentTimeMillis();
         System.out.println("序列化耗时："+ (endTime-startTime)+"ms");
         System.out.println("码流大小为：" + tmp.length+" byte");
         startTime= System.currentTimeMillis();
-        User u1= (User) ProtoStuffUtil.deserialize(tmp, User.class);
+        User u1= (User) KryoUtil.deserialize(tmp);
         endTime=System.currentTimeMillis();
         System.out.println("反序列化耗时："+ (endTime-startTime)+"ms");
     }

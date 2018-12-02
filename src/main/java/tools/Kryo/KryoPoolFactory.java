@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package util;
+package tools.Kryo;
 
 import com.esotericsoftware.kryo.Kryo;
 import com.esotericsoftware.kryo.pool.KryoFactory;
 import com.esotericsoftware.kryo.pool.KryoPool;
 import org.objenesis.strategy.StdInstantiatorStrategy;
-import test.User;
+import testModel.User;
 
 /**
  * @author tangjie<https://github.com/tang-jie>

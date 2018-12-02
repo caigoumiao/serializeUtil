@@ -1,9 +1,7 @@
-package util;
+package tools.Hessian;
 
 import com.caucho.hessian.io.HessianInput;
 import com.caucho.hessian.io.HessianOutput;
-import com.esotericsoftware.kryo.io.Output;
-import test.User;
 
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;

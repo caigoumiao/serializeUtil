@@ -1,4 +1,4 @@
-package util;
+package tools.protostuff;
 
 import com.dyuproject.protostuff.LinkedBuffer;
 import com.dyuproject.protostuff.ProtostuffIOUtil;
