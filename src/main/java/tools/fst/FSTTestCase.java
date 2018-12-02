@@ -1,4 +1,4 @@
-package tools.Fst;
+package tools.fst;
 
 import org.junit.Test;
 import org.nustaq.serialization.FSTConfiguration;
@@ -10,7 +10,6 @@ public class FSTTestCase
 
     @Test
     public void testFst(){
-        FSTConfiguration fstConfiguration=FSTConfiguration.createDefaultConfiguration();
         long startTime= System.currentTimeMillis();
         byte[] tmp = FstUtil.serialize(u);
         long endTime=System.currentTimeMillis();

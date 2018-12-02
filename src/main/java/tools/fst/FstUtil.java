@@ -1,4 +1,4 @@
-package tools.Fst;
+package tools.fst;
 
 import org.nustaq.serialization.FSTConfiguration;
 
