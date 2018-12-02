@@ -1,7 +1,6 @@
 package test;
 
 import org.junit.Test;
-import util.KryoUtil;
 import util.ProtoStuffUtil;
 
 public class ProtoStuffTestCase
