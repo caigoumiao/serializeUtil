@@ -1,8 +1,6 @@
 package tools.kryo;
 
 import org.junit.Test;
-import KryoPoolFactory;
-import KryoUtil;
 import testModel.User;
 
 public class KryoTestCase
